@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="7dp">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cdDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp">
+    <android.support.v7.widget.GridLayout
+        android:id="@+id/gridData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:layout_marginLeft="7dp"
+        android:paddingTop="7dp"
+        android:paddingBottom="1dp">
+
+        <TextView
+            android:id="@+id/txtTextoData1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="Data Compra "
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_column="0"
+            app:layout_row="0" />
+
+        <TextView
+            android:id="@+id/txtTexoDataCompra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="01/01/2010 "
+            android:textSize="17sp"
+            app:layout_column="1"
+            app:layout_columnSpan="1"
+            app:layout_row="0" />
+
+
+    </android.support.v7.widget.GridLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cdItens"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginBottom="1dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1">
+
+        <android.support.v7.widget.GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_row="7"
+            android:layout_column="5"
+            android:paddingTop="7dp"
+            android:paddingBottom="9dp">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_column="0"
+                app:layout_gravity="center"
+                app:layout_rowSpan="7"
+                app:srcCompat="@drawable/ic_paguei" />
+
+            <ImageView
+                android:id="@+id/btnDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_column="4"
+                app:layout_gravity="center"
+                app:layout_rowSpan="1"
+                android:layout_marginRight="8dp"
+                app:srcCompat="@drawable/ic_delete" />
+
+            <TextView
+                android:id="@+id/txtIdCompra"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Supermercado"
+                android:textColor="@android:color/white"
+                app:layout_column="1"
+                app:layout_columnSpan="4"
+                app:layout_row="0" />
+
+            <TextView
+                android:id="@+id/txtDescricao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Supermercado"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_column="1"
+                app:layout_columnSpan="4"
+                app:layout_row="0"
+                android:layout_marginLeft="15dp"/>
+
+            <TextView
+                android:id="@+id/txTextoParcelado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Parcela"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_column="1"
+                app:layout_row="1"
+                android:layout_marginLeft="15dp"/>
+
+            <TextView
+                android:id="@+id/txtParcelado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:text="1/5"
+                android:textSize="17sp"
+                app:layout_column="2"
+                app:layout_columnSpan="1"
+                app:layout_row="1" />
+
+            <TextView
+                android:id="@+id/txtTextoValor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Valor Original"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_column="1"
+                app:layout_columnSpan="1"
+                app:layout_row="5"
+                android:layout_marginLeft="15dp"/>
+
+            <TextView
+                android:id="@+id/txtValorOriginal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:text="1.456,65"
+                android:textAlignment="textStart"
+                android:textSize="17sp"
+                app:layout_column="2"
+                app:layout_columnSpan="1"
+                app:layout_gravity="fill_horizontal"
+                app:layout_row="5" />
+            <TextView
+                android:id="@+id/txtTextoEntrada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Entrada"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_column="1"
+                app:layout_columnSpan="1"
+                app:layout_row="2"
+                android:layout_marginLeft="15dp"/>
+
+            <TextView
+                android:id="@+id/txtTextoData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="Data Vencimento"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_column="1"
+                app:layout_columnSpan="1"
+                app:layout_row="3" />
+
+            <TextView
+                android:id="@+id/txtValorEntrada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:text="0,00"
+                android:textSize="17sp"
+                app:layout_column="2"
+                app:layout_columnSpan="1"
+                app:layout_row="2" />
+
+            <TextView
+                android:id="@+id/txtDataVencimento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:text="01/01/2019"
+                android:textSize="17sp"
+                app:layout_column="2"
+                app:layout_columnSpan="1"
+                app:layout_row="3" />
+
+            <TextView
+                android:id="@+id/txtTextoValor1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data Pagamento"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_column="1"
+                app:layout_columnSpan="1"
+                app:layout_row="4"
+                android:layout_marginLeft="15dp"/>
+
+
+            <TextView
+                android:id="@+id/txtDataPagamento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:text="01/01/2010"
+                android:textAlignment="textStart"
+                android:textSize="17sp"
+                app:layout_column="2"
+                app:layout_columnSpan="1"
+                app:layout_gravity="fill_horizontal"
+                app:layout_row="4" />
+
+            <TextView
+                android:id="@+id/txtTextoValorPagamento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Valor Pagamento"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:layout_column="1"
+                app:layout_columnSpan="1"
+                app:layout_row="6"
+                android:layout_marginLeft="15dp"/>
+
+            <TextView
+                android:id="@+id/txtValorPagamento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:text="1.2345,12"
+                android:textAlignment="textStart"
+                android:textSize="17sp"
+                app:layout_column="2"
+                app:layout_columnSpan="1"
+                app:layout_gravity="fill_horizontal"
+                app:layout_row="6" />
+        </android.support.v7.widget.GridLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cdTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_columnWeight="1"
+        app:layout_rowWeight="1"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="7dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="8dp">
+
+        <android.support.v7.widget.GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp">
+
+            <TextView
+                android:id="@+id/txtTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_row="0"
+                app:layout_column="0"
+                android:text="Total Pagamento "
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="5dp"/>
+
+            <TextView
+                android:id="@+id/txtValorTotalpagamento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_row="0"
+                app:layout_column="1"
+                app:layout_columnSpan="1"
+                android:text="1,635,23 "
+                android:textSize="17sp"
+                android:layout_marginLeft="5dp"/>
+
+            <TextView
+                android:id="@+id/txtTotalParcelas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/txtParcelaAtual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:visibility="invisible"/>
+        </android.support.v7.widget.GridLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
