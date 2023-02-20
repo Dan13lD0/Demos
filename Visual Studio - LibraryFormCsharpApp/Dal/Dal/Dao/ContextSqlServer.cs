@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,12 +13,10 @@ namespace Dal.Dal.Dao
 {
     internal class ContextSqlServer : DbContext
     {
-        public ContextSqlServer() : base("Data Source=(local);Initial Catalog=LibraryApp;Integrated Security=True")
+        public ContextSqlServer() : base("Data Source=.;Initial Catalog=LibraryApp;Integrated Security=True")
         {
             Database.SetInitializer<ContextSqlServer>(new CreateDatabaseIfNotExists<ContextSqlServer>());
             Database.SetInitializer<ContextSqlServer>(new DropCreateDatabaseIfModelChanges<ContextSqlServer>());
-
-            InitializeInformationDefault();
         }
 
 
@@ -25,6 +24,7 @@ namespace Dal.Dal.Dao
         {
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
 
+ 
         }
 
         public DbSet<UserDto> User { get; set; }
@@ -36,24 +36,7 @@ namespace Dal.Dal.Dao
 
         #region DefaultInformations
 
-        private void InitializeInformationDefault()
-        {
-            CreateAdmin();
-        }
-        private void CreateAdmin()
-        {
-            if (User.Count() > 0)
-                return;
-            User.Add(new UserDto
-            {
-                Login = "admin",
-                Name = "admin",
-                Mail = "admin@gmail.com",
-                Password = "123456".Encrypt(),
-                Status = true
-            });
-            SaveChanges();
-        }
+ 
 
         #endregion
     }

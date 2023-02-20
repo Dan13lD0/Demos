@@ -32,36 +32,37 @@ namespace Presentation.View.Client
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmListClient));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ilSearch = new System.Windows.Forms.ImageList(this.components);
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -88,32 +89,94 @@ namespace Presentation.View.Client
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Search";
             // 
-            // label1
+            // button5
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(69, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Name:";
+            this.button5.ImageIndex = 0;
+            this.button5.ImageList = this.ilSearch;
+            this.button5.Location = new System.Drawing.Point(6, 14);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(60, 60);
+            this.button5.TabIndex = 8;
+            this.button5.Text = "New";
+            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button5.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // button4
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(342, 38);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(26, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "RG:";
+            this.button4.ImageIndex = 4;
+            this.button4.ImageList = this.ilSearch;
+            this.button4.Location = new System.Drawing.Point(800, 14);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(60, 60);
+            this.button4.TabIndex = 8;
+            this.button4.Text = "Search";
+            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button4.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // button3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(506, 34);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(30, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "CPF:";
+            this.button3.ImageIndex = 3;
+            this.button3.ImageList = this.ilSearch;
+            this.button3.Location = new System.Drawing.Point(866, 14);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(60, 60);
+            this.button3.TabIndex = 7;
+            this.button3.Text = "Report";
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(673, 50);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 4;
+            // 
+            // button2
+            // 
+            this.button2.ImageIndex = 2;
+            this.button2.ImageList = this.ilSearch;
+            this.button2.Location = new System.Drawing.Point(932, 14);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(60, 60);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "Enable";
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(509, 51);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(158, 20);
+            this.textBox3.TabIndex = 3;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(345, 51);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(158, 20);
+            this.textBox2.TabIndex = 2;
+            // 
+            // button1
+            // 
+            this.button1.ImageKey = "back.png";
+            this.button1.ImageList = this.ilSearch;
+            this.button1.Location = new System.Drawing.Point(998, 14);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(60, 60);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Close";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(72, 50);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(264, 20);
+            this.textBox1.TabIndex = 1;
             // 
             // label4
             // 
@@ -124,79 +187,32 @@ namespace Presentation.View.Client
             this.label4.TabIndex = 0;
             this.label4.Text = "Status:";
             // 
-            // textBox1
+            // label3
             // 
-            this.textBox1.Location = new System.Drawing.Point(72, 50);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(264, 20);
-            this.textBox1.TabIndex = 1;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(506, 34);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(30, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "CPF:";
             // 
-            // textBox2
+            // label2
             // 
-            this.textBox2.Location = new System.Drawing.Point(345, 51);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(158, 20);
-            this.textBox2.TabIndex = 2;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(342, 38);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(26, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "RG:";
             // 
-            // textBox3
+            // label1
             // 
-            this.textBox3.Location = new System.Drawing.Point(509, 51);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(158, 20);
-            this.textBox3.TabIndex = 3;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(673, 50);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 4;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(998, 14);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(60, 60);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Close";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(932, 14);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(60, 60);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Enable";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(866, 14);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(60, 60);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Report";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(800, 14);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(60, 60);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "Search";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(6, 14);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(60, 60);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "New";
-            this.button5.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(69, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Name:";
             // 
             // panel1
             // 
@@ -210,6 +226,17 @@ namespace Presentation.View.Client
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1064, 346);
             this.panel1.TabIndex = 1;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(2, 3);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(1054, 311);
+            this.dataGridView1.TabIndex = 1;
             // 
             // bindingNavigator1
             // 
@@ -237,6 +264,13 @@ namespace Presentation.View.Client
             this.bindingNavigator1.Size = new System.Drawing.Size(1060, 25);
             this.bindingNavigator1.TabIndex = 0;
             this.bindingNavigator1.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -271,16 +305,9 @@ namespace Presentation.View.Client
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -303,19 +330,18 @@ namespace Presentation.View.Client
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // dataGridView1
+            // ilSearch
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(2, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1054, 311);
-            this.dataGridView1.TabIndex = 1;
+            this.ilSearch.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ilSearch.ImageStream")));
+            this.ilSearch.TransparentColor = System.Drawing.Color.Transparent;
+            this.ilSearch.Images.SetKeyName(0, "add.png");
+            this.ilSearch.Images.SetKeyName(1, "back.png");
+            this.ilSearch.Images.SetKeyName(2, "enable_disable.png");
+            this.ilSearch.Images.SetKeyName(3, "report.png");
+            this.ilSearch.Images.SetKeyName(4, "search.png");
             // 
             // FrmListClient
             // 
@@ -334,10 +360,10 @@ namespace Presentation.View.Client
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -370,5 +396,6 @@ namespace Presentation.View.Client
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+        public System.Windows.Forms.ImageList ilSearch;
     }
 }

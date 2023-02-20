@@ -55,16 +55,24 @@ namespace Dal.Dal
 
         public List<UserDto> GetList(UserDto value, bool? status)
         {
-            using (var conn = new ContextSqlServer())
+            try
             {
-                if (status != null)
+                using (var conn = new ContextSqlServer())
                 {
-                    return conn.User.Where(i => i.Name.Contains(value.Name) && i.Login.Contains(value.Login) && i.Mail.Contains(value.Mail) && i.Status.Equals((bool)status)).ToList();
+                    if (status != null)
+                    {
+                        return conn.User.Where(i => i.Name.Contains(value.Name) && i.Login.Contains(value.Login) && i.Mail.Contains(value.Mail) && i.Status.Equals((bool)status)).ToList();
+                    }
+                    else
+                    {
+                        return conn.User.Where(i => i.Name.Contains(value.Name) && i.Login.Contains(value.Login) && i.Mail.Contains(value.Mail)).ToList();
+                    }
                 }
-                else
-                {
-                    return conn.User.Where(i => i.Name.Contains(value.Name) && i.Login.Contains(value.Login) && i.Mail.Contains(value.Mail)).ToList();
-                }
+            }
+            catch (Exception ex)
+            {
+
+                throw;
             }
         }
 
